@@ -37,59 +37,59 @@
                     <!-- li 加 has-sub 开启分组-->
                     <li class="has-sub">
                         <a>
-                            <i class="icon-globe"></i>
-                            <span class="title">在线工具</span>
+                            <i class="icon-star"></i>
+                            <span class="title">日常 Daily</span>
                         </a>
                         <!-- ul li 格式添加子分组-->
                         <ul>
                             <li>
-                                <a href="#教学助手" class="smooth">
-                                    <i class="icon-star"></i>
-                                    <span class="title">教学助手</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#图文影音" class="smooth">
+                                <a href="#笔记 Write" class="smooth">
                                     <i class="icon-pencil"></i>
-                                    <span class="title">图文影音</span>
+                                    <span class="title">笔记 Write</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#百科全书" class="smooth">
-                                    <i class="icon-database"></i>
-                                    <span class="title">百科全书</span>
+                                <a href="#工具 Tools" class="smooth">
+                                    <i class="icon-desktop"></i>
+                                    <span class="title">工具 Tools</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#阅读 Read" class="smooth">
+                                    <i class="icon-lightbulb"></i>
+                                    <span class="title">阅读 Read</span>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <% if (site.customConfig.fun4) { %>
+                    <% if (site.customConfig.funLearn) { %>
                     <li>
-                        <a href="#实用软件" class="smooth">
-                            <i class="icon-desktop"></i>
-                            <span class="title">实用软件</span>
-                        </a>
-                    </li>
-                    <% } %>
-                    <% if (site.customConfig.fun4) { %>
-                    <li>
-                        <a href="#线上课程" class="smooth">
+                        <a href="#学习 Learn" class="smooth">
                             <i class="icon-graduation-cap"></i>
-                            <span class="title">线上课程</span>
+                            <span class="title">学习 Learn</span>
                         </a>
                     </li>
                     <% } %>
-                    <% if (site.customConfig.fun6) { %>
+                    <% if (site.customConfig.funStock) { %>
                     <li>
-                        <a href="#素材资源" class="smooth">
-                            <i class="icon-inbox"></i>
-                            <span class="title">素材资源</span>
+                        <a href="#股市 Stock" class="smooth">
+                            <i class="icon-money"></i>
+                            <span class="title">股市 Stock</span>
+                        </a>
+                    </li>
+                    <% } %>
+                    <% if (site.customConfig.funNav) { %>
+                    <li>
+                        <a href="#导航 Nav" class="smooth">
+                            <i class="icon-globe"></i>
+                            <span class="title">导航 Nav</span>
                         </a>
                     </li>
                     <% } %>
                     <li class="submit-tag">
                         <a href="<%= themeConfig.domain %>/about">
                             <i class="icon-heart"></i>
-                            <span class="title">关于本站</span>
+                            <span class="title">关于 About</span>
                         </a>
                     </li>
                 </ul>
@@ -114,83 +114,12 @@
             </div>
             <!-- 今日诗词 -->
             <br />
-            <!-- 在线工具 -->
-            <% if (site.customConfig.fun1) { %>
-            <h4 class="text-gray"><i class="icon-star" style="margin-right: 7px;" id="教学助手"></i>教学助手</h4>
-            <div class="row">
-                <% site.customConfig.fun1.forEach(function(fun) { %>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img <% if (fun.siteLogo) { %> data-src="<%= fun.siteLogo %>" <% } else { %> avatar="<%= fun.siteName %>" <% }; %> class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong><%= fun.siteName %></strong>
-                                </a>
-                                <p class="overflowClip_2"><%= fun.description %></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
-            <br />
-            <% } %>
-            <% if (site.customConfig.fun2) { %>
-            <h4 class="text-gray"><i class="icon-pencil" style="margin-right: 7px;" id="图文影音"></i>图文影音</h4>
-            <div class="row">
-                <% site.customConfig.fun2.forEach(function(fun) { %>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img <% if (fun.siteLogo) { %> data-src="<%= fun.siteLogo %>" <% } else { %> avatar="<%= fun.siteName %>" <% }; %> class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong><%= fun.siteName %></strong>
-                                </a>
-                                <p class="overflowClip_2"><%= fun.description %></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
-            <br />
-            <% } %>
-            <% if (site.customConfig.fun3) { %>
-            <h4 class="text-gray"><i class="icon-database" style="margin-right: 7px;" id="百科全书"></i>百科全书</h4>
-            <div class="row">
-                <% site.customConfig.fun3.forEach(function(fun) { %>
-                <div class="col-sm-3">
-                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
-                        <div class="xe-comment-entry">
-                            <a class="xe-user-img">
-                                <img <% if (fun.siteLogo) { %> data-src="<%= fun.siteLogo %>" <% } else { %> avatar="<%= fun.siteName %>" <% }; %> class="lozad img-circle" width="40">
-                            </a>
-                            <div class="xe-comment">
-                                <a href="#" class="xe-user-name overflowClip_1">
-                                    <strong><%= fun.siteName %></strong>
-                                </a>
-                                <p class="overflowClip_2"><%= fun.description %></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <% }); %>
-            </div>
-            <br />
-            <% } %>
-            <!-- END 在线工具 -->
 
-            <!-- 实用软件 -->
-            <% if (site.customConfig.fun4) { %>
-            <h4 class="text-gray"><i class="icon-desktop" style="margin-right: 7px;" id="实用软件"></i>实用软件</h4>
+            <!-- 笔记 Write -->
+            <% if (site.customConfig.funWrite) { %>
+            <h4 class="text-gray"><i class="icon-pencil" style="margin-right: 7px;" id="笔记 Write"></i>笔记 Write</h4>
             <div class="row">
-                <% site.customConfig.fun4.forEach(function(fun) { %>
+                <% site.customConfig.funWrite.forEach(function(fun) { %>
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
                         <div class="xe-comment-entry">
@@ -210,13 +139,13 @@
             </div>
             <br />
             <% } %>
-            <!-- END 实用软件 -->
+            <!-- 笔记 Write -->
 
-            <!-- 线上课程 -->
-            <% if (site.customConfig.fun5) { %>
-            <h4 class="text-gray"><i class="icon-graduation-cap" style="margin-right: 7px;" id="线上课程"></i>线上课程</h4>
+            <!-- 工具 Tools -->
+            <% if (site.customConfig.funTools) { %>
+            <h4 class="text-gray"><i class="icon-desktop" style="margin-right: 7px;" id="工具 Tools"></i>工具 Tools</h4>
             <div class="row">
-                <% site.customConfig.fun5.forEach(function(fun) { %>
+                <% site.customConfig.funTools.forEach(function(fun) { %>
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
                         <div class="xe-comment-entry">
@@ -236,13 +165,13 @@
             </div>
             <br />
             <% } %>
-            <!-- END 线上课程 -->
+            <!-- 工具 Tools -->
 
-            <!-- 素材资源 -->
-            <% if (site.customConfig.fun6) { %>
-            <h4 class="text-gray"><i class="icon-inbox" style="margin-right: 7px;" id="素材资源"></i>素材资源</h4>
+            <!-- 阅读 Read -->
+            <% if (site.customConfig.funRead) { %>
+            <h4 class="text-gray"><i class="icon-lightbulb" style="margin-right: 7px;" id="阅读 Read"></i>阅读 Read</h4>
             <div class="row">
-                <% site.customConfig.fun6.forEach(function(fun) { %>
+                <% site.customConfig.funRead.forEach(function(fun) { %>
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
                         <div class="xe-comment-entry">
@@ -262,8 +191,85 @@
             </div>
             <br />
             <% } %>
-            <!-- END 素材资源 -->
+            <!-- 阅读 Read -->
 
+            <!-- 学习 Learn -->
+            <% if (site.customConfig.funLearn) { %>
+            <h4 class="text-gray"><i class="icon-graduation-cap" style="margin-right: 7px;" id="学习 Learn"></i>学习 Learn</h4>
+            <div class="row">
+                <% site.customConfig.funLearn.forEach(function(fun) { %>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img <% if (fun.siteLogo) { %> data-src="<%= fun.siteLogo %>" <% } else { %> avatar="<%= fun.siteName %>" <% }; %> class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong><%= fun.siteName %></strong>
+                                </a>
+                                <p class="overflowClip_2"><%= fun.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <br />
+            <% } %>
+            <!-- 学习 Learn -->
+
+            <!-- 股市 Stock -->
+            <% if (site.customConfig.funStock) { %>
+            <h4 class="text-gray"><i class="icon-money" style="margin-right: 7px;" id="股市 Stock"></i>股市 Stock</h4>
+            <div class="row">
+                <% site.customConfig.funStock.forEach(function(fun) { %>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img <% if (fun.siteLogo) { %> data-src="<%= fun.siteLogo %>" <% } else { %> avatar="<%= fun.siteName %>" <% }; %> class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong><%= fun.siteName %></strong>
+                                </a>
+                                <p class="overflowClip_2"><%= fun.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <br />
+            <% } %>
+            <!-- 股市 Stock -->
+
+            <!-- 导航 Nav -->
+            <% if (site.customConfig.funNav) { %>
+            <h4 class="text-gray"><i class="icon-globe" style="margin-right: 7px;" id="导航 Nav"></i>导航 Nav</h4>
+            <div class="row">
+                <% site.customConfig.funNav.forEach(function(fun) { %>
+                <div class="col-sm-3">
+                    <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('<%= fun.siteLink %>', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="<%= fun.siteLink %>">
+                        <div class="xe-comment-entry">
+                            <a class="xe-user-img">
+                                <img <% if (fun.siteLogo) { %> data-src="<%= fun.siteLogo %>" <% } else { %> avatar="<%= fun.siteName %>" <% }; %> class="lozad img-circle" width="40">
+                            </a>
+                            <div class="xe-comment">
+                                <a href="#" class="xe-user-name overflowClip_1">
+                                    <strong><%= fun.siteName %></strong>
+                                </a>
+                                <p class="overflowClip_2"><%= fun.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+            </div>
+            <br />
+            <% } %>
+            <!-- 导航 Nav -->
 
             <!-- Main Footer -->
             <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->

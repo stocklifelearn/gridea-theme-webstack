@@ -5,9 +5,9 @@
   "repository": "https://github.com/lmm214/gridea-theme-webstack",
   "customConfig": [
     {
-      "name": "fun1",
-      "label": "教学助手",
-      "group": "教学助手",
+      "name": "funWrite",
+      "label": "笔记 Write",
+      "group": "笔记 Write",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -19,9 +19,9 @@
       "note": ""
     },
     {
-      "name": "fun2",
-      "label": "图文影音",
-      "group": "图文影音",
+      "name": "funTools",
+      "label": "工具 Tools",
+      "group": "工具 Tools",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -33,9 +33,9 @@
       "note": ""
     },
     {
-      "name": "fun3",
-      "label": "百科全书",
-      "group": "百科全书",
+      "name": "funRead",
+      "label": "阅读 Read",
+      "group": "阅读 Read",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -47,9 +47,9 @@
       "note": ""
     },
     {
-      "name": "fun4",
-      "label": "实用软件",
-      "group": "实用软件",
+      "name": "funLearn",
+      "label": "学习 Learn",
+      "group": "学习 Learn",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -61,9 +61,9 @@
       "note": ""
     },
     {
-      "name": "fun5",
-      "label": "线上课程",
-      "group": "线上课程",
+      "name": "funStock",
+      "label": "股市 Stock",
+      "group": "股市 Stock",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -75,9 +75,9 @@
       "note": ""
     },
     {
-      "name": "fun6",
-      "label": "素材资源",
-      "group": "素材资源",
+      "name": "funNav",
+      "label": "导航 Nav",
+      "group": "导航 Nav",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -88,6 +88,5 @@
       ],
       "note": ""
     }
-
   ]
 }
