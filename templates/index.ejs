@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="<%= themeConfig.domain %>/media/images/eduifuns.png">
     <link rel="stylesheet" href="//fonts.loli.net/css?family=Arimo:400,700,400italic">
     <link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/icomoon.css">
+    <link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/main.css?v=<%= site.utils.now %>">
     <style>
       .page-container {
         display: block;
@@ -21,6 +22,7 @@
         height: 100%;
         overflow-y: auto;
         text-align: center; /* Center the content */
+        width: 220px; /* Set default width */
       }
       .sidebar-menu .logo-env {
         display: flex;
@@ -28,10 +30,9 @@
       }
       .page-container .main-content {
         display: block;
-        margin-left: 280px;
+        margin-left: 220px; /* Default width */
       }
     </style>
-    <link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/main.css?v=<%= site.utils.now %>">
   </head>
 
 <body class="page-body">
@@ -409,8 +410,8 @@
 
       function handleMouseMove(e) {
           let newWidth = e.clientX;
-          if (newWidth < 200) newWidth = 200; // Minimum width
-          if (newWidth > 600) newWidth = 600; // Maximum width
+          if (newWidth < 220) newWidth = 220; // Minimum width
+          if (newWidth > 300) newWidth = 300; // Maximum width
           sidebar.style.width = newWidth + 'px';
           mainContent.style.marginLeft = newWidth + 'px';
       }
