@@ -9,6 +9,28 @@
     <link rel="shortcut icon" href="<%= themeConfig.domain %>/media/images/eduifuns.png">
     <link rel="stylesheet" href="//fonts.loli.net/css?family=Arimo:400,700,400italic">
     <link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/icomoon.css">
+    <style>
+      .page-container {
+        display: block;
+      }
+      .sidebar-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        overflow-y: auto;
+        text-align: center; /* Center the content */
+      }
+      .sidebar-menu .logo-env {
+        display: flex;
+        justify-content: center;
+      }
+      .page-container .main-content {
+        display: block;
+        margin-left: 280px;
+      }
+    </style>
     <link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/main.css?v=<%= site.utils.now %>">
   </head>
 
@@ -16,6 +38,7 @@
     <!-- skin-white -->
     <div class="page-container">
         <div class="sidebar-menu toggle-others fixed">
+            <div id="sidebar-resize-handle" style="position: absolute; top: 0; right: -2px; width: 5px; height: 100%; cursor: col-resize; z-index: 10;"></div>
             <div class="sidebar-menu-inner">
                 <header class="logo-env">
                     <!-- logo -->
@@ -43,19 +66,19 @@
                         <!-- ul li 格式添加子分组-->
                         <ul>
                             <li>
-                                <a href="#笔记 Write" class="smooth">
+                                <a href="#write" class="smooth">
                                     <i class="icon-pencil"></i>
                                     <span class="title">笔记 Write</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#工具 Tools" class="smooth">
+                                <a href="#tools" class="smooth">
                                     <i class="icon-desktop"></i>
                                     <span class="title">工具 Tools</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#阅读 Read" class="smooth">
+                                <a href="#read" class="smooth">
                                     <i class="icon-lightbulb"></i>
                                     <span class="title">阅读 Read</span>
                                 </a>
@@ -64,7 +87,7 @@
                     </li>
                     <% if (site.customConfig.funLearn) { %>
                     <li>
-                        <a href="#学习 Learn" class="smooth">
+                        <a href="#learn" class="smooth">
                             <i class="icon-graduation-cap"></i>
                             <span class="title">学习 Learn</span>
                         </a>
@@ -72,7 +95,7 @@
                     <% } %>
                     <% if (site.customConfig.funStock) { %>
                     <li>
-                        <a href="#股市 Stock" class="smooth">
+                        <a href="#stock" class="smooth">
                             <i class="icon-money"></i>
                             <span class="title">股市 Stock</span>
                         </a>
@@ -80,7 +103,7 @@
                     <% } %>
                     <% if (site.customConfig.funNav) { %>
                     <li>
-                        <a href="#导航 Nav" class="smooth">
+                        <a href="#nav" class="smooth">
                             <i class="icon-globe"></i>
                             <span class="title">导航 Nav</span>
                         </a>
@@ -117,7 +140,7 @@
 
             <!-- 笔记 Write -->
             <% if (site.customConfig.funWrite) { %>
-            <h4 class="text-gray"><i class="icon-pencil" style="margin-right: 7px;" id="笔记 Write"></i>笔记 Write</h4>
+            <h4 class="text-gray"><i class="icon-pencil" style="margin-right: 7px;" id="write"></i>笔记 Write</h4>
             <div class="row">
                 <% site.customConfig.funWrite.forEach(function(fun) { %>
                 <div class="col-sm-3">
@@ -143,7 +166,7 @@
 
             <!-- 工具 Tools -->
             <% if (site.customConfig.funTools) { %>
-            <h4 class="text-gray"><i class="icon-desktop" style="margin-right: 7px;" id="工具 Tools"></i>工具 Tools</h4>
+            <h4 class="text-gray"><i class="icon-desktop" style="margin-right: 7px;" id="tools"></i>工具 Tools</h4>
             <div class="row">
                 <% site.customConfig.funTools.forEach(function(fun) { %>
                 <div class="col-sm-3">
@@ -169,7 +192,7 @@
 
             <!-- 阅读 Read -->
             <% if (site.customConfig.funRead) { %>
-            <h4 class="text-gray"><i class="icon-lightbulb" style="margin-right: 7px;" id="阅读 Read"></i>阅读 Read</h4>
+            <h4 class="text-gray"><i class="icon-lightbulb" style="margin-right: 7px;" id="read"></i>阅读 Read</h4>
             <div class="row">
                 <% site.customConfig.funRead.forEach(function(fun) { %>
                 <div class="col-sm-3">
@@ -195,7 +218,7 @@
 
             <!-- 学习 Learn -->
             <% if (site.customConfig.funLearn) { %>
-            <h4 class="text-gray"><i class="icon-graduation-cap" style="margin-right: 7px;" id="学习 Learn"></i>学习 Learn</h4>
+            <h4 class="text-gray"><i class="icon-graduation-cap" style="margin-right: 7px;" id="learn"></i>学习 Learn</h4>
             <div class="row">
                 <% site.customConfig.funLearn.forEach(function(fun) { %>
                 <div class="col-sm-3">
@@ -221,7 +244,7 @@
 
             <!-- 股市 Stock -->
             <% if (site.customConfig.funStock) { %>
-            <h4 class="text-gray"><i class="icon-money" style="margin-right: 7px;" id="股市 Stock"></i>股市 Stock</h4>
+            <h4 class="text-gray"><i class="icon-money" style="margin-right: 7px;" id="stock"></i>股市 Stock</h4>
             <div class="row">
                 <% site.customConfig.funStock.forEach(function(fun) { %>
                 <div class="col-sm-3">
@@ -247,7 +270,7 @@
 
             <!-- 导航 Nav -->
             <% if (site.customConfig.funNav) { %>
-            <h4 class="text-gray"><i class="icon-globe" style="margin-right: 7px;" id="导航 Nav"></i>导航 Nav</h4>
+            <h4 class="text-gray"><i class="icon-globe" style="margin-right: 7px;" id="nav"></i>导航 Nav</h4>
             <div class="row">
                 <% site.customConfig.funNav.forEach(function(fun) { %>
                 <div class="col-sm-3">
@@ -303,7 +326,7 @@
     </script>
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    <script src="//cdnjs.loli.net/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="<%= themeConfig.domain %>/media/js/jquery.min.js"></script>
     <!-- 锚点平滑移动 -->
     <script type="text/javascript">
     $(document).ready(function() {
@@ -340,31 +363,28 @@
             $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
             $(this).addClass('active'); // 添加当前元素的样式
         });
+        
         $("a.smooth").click(function(ev) {
             ev.preventDefault();
 
-            public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
-            ps_destroy();
-            $("html, body").animate({
-                scrollTop: $($(this).attr("href")).offset().top - 30
-            }, {
-                duration: 500,
-                easing: "swing"
+            // For mobile view, hide the menu after clicking
+            if (public_vars.$mainMenu.hasClass('mobile-is-visible')) {
+                public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+                ps_destroy();
+            }
+
+            // Animate scroll using TweenLite, which is native to the theme
+            var target_pos = $($(this).attr("href")).offset().top - 30;
+            var current_pos = { pos: $(window).scrollTop() };
+
+            TweenLite.to(current_pos, 0.5, {
+                pos: target_pos,
+                ease: Power4.easeOut,
+                onUpdate: function() {
+                    $(window).scrollTop(current_pos.pos);
+                }
             });
         });
-        return false;
-    });
-
-    var href = "";
-    var pos = 0;
-    $("a.smooth").click(function(e) {
-        $("#main-menu li").each(function() {
-            $(this).removeClass("active");
-        });
-        $(this).parent("li").addClass("active");
-        e.preventDefault();
-        href = $(this).attr("href");
-        pos = $(href).position().top - 30;
     });
     </script>
     <!-- Bottom Scripts -->
@@ -375,6 +395,31 @@
     <script src="<%= themeConfig.domain %>/media/js/xenon-custom.js"></script>
     <script src="<%= themeConfig.domain %>/media/js/lozad.js"></script>
     <script src="<%= themeConfig.domain %>/media/js/LetterAvatar.js"></script>
+<script>
+      // Sidebar Resizing Logic
+      const sidebar = document.querySelector('.sidebar-menu');
+      const mainContent = document.querySelector('.main-content');
+      const resizeHandle = document.getElementById('sidebar-resize-handle');
+
+      resizeHandle.addEventListener('mousedown', function(e) {
+          e.preventDefault();
+          document.addEventListener('mousemove', handleMouseMove);
+          document.addEventListener('mouseup', stopResize);
+      });
+
+      function handleMouseMove(e) {
+          let newWidth = e.clientX;
+          if (newWidth < 200) newWidth = 200; // Minimum width
+          if (newWidth > 600) newWidth = 600; // Maximum width
+          sidebar.style.width = newWidth + 'px';
+          mainContent.style.marginLeft = newWidth + 'px';
+      }
+
+      function stopResize() {
+          document.removeEventListener('mousemove', handleMouseMove);
+          document.removeEventListener('mouseup', stopResize);
+      }
+    </script>
 </body>
 
 
