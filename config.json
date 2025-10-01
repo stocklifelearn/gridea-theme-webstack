@@ -5,9 +5,9 @@
   "repository": "https://github.com/lmm214/gridea-theme-webstack",
   "customConfig": [
     {
-      "name": "funWrite",
-      "label": "笔记 Write",
-      "group": "笔记 Write",
+      "name": "funJYSpace",
+      "label": "匠鱼空间",
+      "group": "匠鱼空间",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -19,9 +19,9 @@
       "note": ""
     },
     {
-      "name": "funTools",
-      "label": "工具 Tools",
-      "group": "工具 Tools",
+      "name": "funOften",
+      "label": "常用 Often",
+      "group": "常用 Often",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -47,9 +47,9 @@
       "note": ""
     },
     {
-      "name": "funLearn",
-      "label": "学习 Learn",
-      "group": "学习 Learn",
+      "name": "funTools",
+      "label": "工具 Tools",
+      "group": "工具 Tools",
       "type": "array",
       "value": [],
       "arrayItems": [
@@ -61,9 +61,51 @@
       "note": ""
     },
     {
-      "name": "funStock",
-      "label": "股市 Stock",
-      "group": "股市 Stock",
+      "name": "funCoding",
+      "label": "编程 Coding",
+      "group": "编程 Coding",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "funFinance",
+      "label": "财务 Finance",
+      "group": "财务 Finance",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "funRelationship",
+      "label": "关系 Relationship",
+      "group": "关系 Relationship",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "funSojourn",
+      "label": "旅居 Sojourn",
+      "group": "旅居 Sojourn",
       "type": "array",
       "value": [],
       "arrayItems": [
