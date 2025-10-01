@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="<%= themeConfig.domain %>/media/css/main.css?v=<%= site.utils.now %>">
     <style>
       .page-container {
-        display: block;
+        display: flex; /* Use flexbox for main layout */
       }
       .sidebar-menu {
-        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -23,14 +22,15 @@
         overflow-y: auto;
         text-align: center; /* Center the content */
         width: 220px; /* Set default width */
+        flex-shrink: 0; /* Prevent sidebar from shrinking */
       }
       .sidebar-menu .logo-env {
         display: flex;
         justify-content: center;
       }
       .page-container .main-content {
-        display: block;
-        margin-left: 220px; /* Default width */
+        flex-grow: 1; /* Allow main content to grow and take remaining space */
+        margin-left: 220px; /* Default width, will be adjusted by JS */
       }
     </style>
   </head>
