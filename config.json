@@ -75,6 +75,48 @@
       "note": ""
     },
     {
+      "name": "funDraw",
+      "label": "制图 Draw",
+      "group": "制图 Draw",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "funAi",
+      "label": "人工智能 AI",
+      "group": "人工智能 AI",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "funLife",
+      "label": "生活 Life",
+      "group": "生活 Life",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
       "name": "funFinance",
       "label": "财务 Finance",
       "group": "财务 Finance",
@@ -120,6 +162,20 @@
       "name": "funNav",
       "label": "导航 Nav",
       "group": "导航 Nav",
+      "type": "array",
+      "value": [],
+      "arrayItems": [
+        { "label": "名称", "name": "siteName", "type": "input", "value": "" },
+        { "label": "链接", "name": "siteLink", "type": "input", "value": "" },
+        { "label": "Logo", "name": "siteLogo", "type": "input", "value": "" },
+        { "label": "描述", "name": "description", "type": "input", "value": "" }
+      ],
+      "note": ""
+    },
+    {
+      "name": "funArchive",
+      "label": "归档 Archive",
+      "group": "归档 Archive",
       "type": "array",
       "value": [],
       "arrayItems": [
